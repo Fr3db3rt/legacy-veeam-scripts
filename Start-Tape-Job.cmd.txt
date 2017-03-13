@@ -1,0 +1,12 @@
+Batch
+-----
+
+start "Start-Tape-Job" cmd /c PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& 'C:\Scripts\Start-Tape-Job.ps1'"
+
+--------
+
+PS1
+---
+Add-PSSnapin VeeamPSSnapin
+Get-VBRTapeJob | Start-VBRJob -FullBackup
+
